@@ -1,0 +1,1 @@
+web: erb nginx.conf.erb > nginx.conf && nginx/sbin/nginx -c nginx.conf

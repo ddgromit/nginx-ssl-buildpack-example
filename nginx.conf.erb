@@ -1,0 +1,13 @@
+worker_processes <%= ENV['NGINX_WORKERS'] || 4 %>;
+daemon off;
+
+http {
+  server {
+    listen <%= ENV["PORT"] %>;
+    server_name _;
+
+    location / {
+      return 200;
+    }
+  }
+}
