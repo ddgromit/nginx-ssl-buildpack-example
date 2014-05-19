@@ -1,11 +1,14 @@
 worker_processes <%= ENV['NGINX_WORKERS'] || 4 %>;
 daemon off;
+error_log /dev/stdout info;
 
 events {
   worker_connections 768;
 }
 
 http {
+  access_log /dev/stdout;
+
   server {
     listen <%= ENV["PORT"] %>;
     server_name _;
