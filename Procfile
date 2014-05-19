@@ -1,1 +1,1 @@
-web: erb nginx.conf.erb > nginx.conf && /app/nginx/sbin/nginx -c nginx.conf
+web: erb nginx.conf.erb > nginx.conf && /app/nginx/sbin/nginx -c /app/nginx.conf
